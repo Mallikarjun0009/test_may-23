@@ -1,0 +1,41 @@
+Saturday 23 May 2026 02:53:34 AM IST
+Filesystem                      Size  Used Avail Use% Mounted on
+devtmpfs                        4.0M     0  4.0M   0% /dev
+tmpfs                           7.7G   16K  7.7G   1% /dev/shm
+tmpfs                           3.1G  318M  2.8G  11% /run
+efivarfs                        256K   31K  221K  13% /sys/firmware/efi/efivars
+/dev/mapper/rhel-root            11G  6.3G  4.2G  60% /
+/dev/sda2                      1014M  385M  630M  38% /boot
+/dev/mapper/rhel-home           7.5G  1.5G  6.0G  20% /home
+/dev/mapper/rhel-var            7.0G  932M  6.1G  14% /var
+/dev/mapper/rhel-tmp            6.6G  612M  6.0G  10% /tmp
+/dev/mapper/appvg-app.vol       246G   43G  191G  19% /app
+/dev/sda1                       599M  7.1M  592M   2% /boot/efi
+/dev/mapper/rhel-var_log        3.8G  916M  2.9G  25% /var/log
+/dev/mapper/rhel-var_tmp        5.6G  147M  5.5G   3% /var/tmp
+/dev/mapper/rhel-var_log_audit  2.7G   91M  2.7G   4% /var/log/audit
+tmpfs                           1.6G  4.0K  1.6G   1% /run/user/0
+tmpfs                           1.6G  4.0K  1.6G   1% /run/user/1004
+cache count: 24
+memory usage: 17.14%
+cpu usage: 
+1.40%
+eaaa service: active
+eaaa-ui service: active
+nginx service: active
+-rw-r--r-- 1 root root  418K May 23 02:02 authResponse-192.168.56.178-2026-05-23_020209.988.csv
+-rw-r--r-- 1 root root  408K May 23 02:17 authResponse-192.168.56.178-2026-05-23_021709.987.csv
+-rw-r--r-- 1 root root  422K May 23 02:32 authResponse-192.168.56.178-2026-05-23_023209.987.csv
+-rw-r--r-- 1 root root  457K May 23 02:47 authResponse-192.168.56.178-2026-05-23_024709.988.csv
+-rw-r--r-- 1 root root  192K May 23 02:53 authResponse.inp
+APP_BKP:
+-rw-r--r-- 1 root root 11M May 21 00:30 PAAAA06_AAA-21May_00_30.zip.gz
+-rw-r--r-- 1 root root 21M May 21 00:30 PAAAA06_SM-21May_00_30.zip.gz
+-rw-r--r-- 1 root root 11M May 22 00:30 PAAAA06_AAA-22May_00_30.zip.gz
+-rw-r--r-- 1 root root 22M May 22 00:30 PAAAA06_SM-22May_00_30.zip
+-rw-r--r-- 1 root root 12M May 23 00:30 PAAAA06_AAA-23May_00_30.zip
+-rw-r--r-- 1 root root 22M May 23 00:30 PAAAA06_SM-23May_00_30.zip
+Radius ERRORS:
+0
+Saturday 23 May 2026 02:53:35 AM IST
+timed out waiting for input: auto-logout
