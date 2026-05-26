@@ -7,4 +7,4 @@ echo "2nd value : ${FRUITS[1]}"
 echo "3rd Value : ${FRUITS[2]}"
 echo "4th Value : ${FRUITS[3]}"
 
-echo "show me the all value here: $@"
+echo "show me the all value here: ${FRUITS[@]}"
