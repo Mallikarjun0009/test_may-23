@@ -18,3 +18,11 @@ then
 else
     echo "instalation is ... success..!!"
 fi
+
+if [$? -ge 0]
+then
+	echo "The git instalation prosess is fsiled"
+else
+	echo "The git istalations is ... success..!"
+fi
+yum install git -y
