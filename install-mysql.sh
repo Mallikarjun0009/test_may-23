@@ -1,7 +1,7 @@
 #!/bin/bash
 ID=$(id -u)
 
-if [$ID -ne 0]
+if [ $ID -ne 0 ]
 then
     echo "Error: Kndly run this script into a root user"
     exit 1
