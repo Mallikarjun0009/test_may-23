@@ -19,7 +19,7 @@ else
     echo "instalation is ... success..!!"
 fi
 
-if [$? -ne 0]
+if [ $? -ne 0 ]
 then
 	echo "The git instalation prosess is fsiled"
     exit 1
