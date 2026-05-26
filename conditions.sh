@@ -1,10 +1,12 @@
 #!/bin/bash
 
-NUMBER=$1
 
-if [ $NUMBER -gt 100 ]
-then
-    echo "Give number $NUMBER is greater then 100"
+# Script to find the greatest of two numbers
+read -p "Enter first number: " num1
+read -p "Enter second number: " num2
+
+if [ "$num1" -gt "$num2" ]; then
+    echo "The greater number is: $num1"
 else
-    echo "Give number $NUMBER is not greter then 100"
+    echo "The greater number is: $num2"
 fi
