@@ -18,8 +18,8 @@ else
     echo -e "${G}Welcome, root user.${N}"
 fi
 
-touch "$LOG_FILE"
-
+# touch "$LOG_FILE"
+VALIDATE(){
 if [ $? -ne 0 ]
 then
     echo "=== Failed to create log file at $timestamp ==="
@@ -27,7 +27,7 @@ then
 else
     echo "=== Installation started at $timestamp ===" >> "$LOG_FILE"
 fi
-
+}
 # INSTALL_PACKAGE() {
 #     yum install $1 -y >> $LOG_FILE 2>&1
 #     VALIDATE $? "Installing $1"
@@ -38,10 +38,16 @@ fi
 # do
     
 yum install mysql -y >> $LOG_FILE
+VALIDATE $? "Installing MYSQL.."
 
-if [ $? -eq 0 ]
-then
-    echo -e "${G}MySQL installation successful.${N}"
-else
-    echo -e "${R}MySQL installation failed. Check $LOG_FILE.${N}"
-fi
+yum install ngnix -y >> $LOG_FILE
+VALIDATE $? "Installing NGINX"
+
+yum install tree -y >> $LOG_FILE
+VALIDATE $? "Installing TREE"
+# if [ $? -eq 0 ]
+# then
+#     echo -e "${G}MySQL installation successful.${N}"
+# else
+#     echo -e "${R}MySQL installation failed. Check $LOG_FILE.${N}"
+# fi
