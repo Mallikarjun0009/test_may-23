@@ -1,17 +1,27 @@
 #!/bin/bash
 
-set -e
+ID=$(id -u)
 
-ls -ltr
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+LOG_FILE="/tmp/package_install.log"
+timestmp="date +%Y-%m-%d_%H-%M-%S"
 
-touch example.txt
+if [ $id -ne 0 ]
+then
+    echo "this is not a root user kindly cehck the root aeccess"
+    exit 1
+else
+    echo "wellcome to the root aeccess"
 
-echo "Before wrong command"
+touch "$LOG_FILE"
 
-lsfff
+if [ $? -eq 0 ]
+then
+    echo " === Installation started at $(timestmp) ===" >> "$LOG_FILE"
+else
 
-echo "After wrong command"
+yum install mysql -y
 
-cd /tmp
-
-cd /home/centos
