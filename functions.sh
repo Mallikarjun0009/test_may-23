@@ -23,5 +23,5 @@ then
     echo " === Installation started at $(timestmp) ===" >> "$LOG_FILE"
 else
     echo "=== Installation failed $(timestmp) ===" >> "$LOG_FILE"
-
+fi
 yum install mysql -y
