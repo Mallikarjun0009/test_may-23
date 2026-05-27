@@ -6,24 +6,42 @@ R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
-LOG_FILE="/tmp/package_install.log"
-timestmp="date +%Y-%m-%d_%H-%M-%S"
 
-if [ $id -ne 0 ]
+LOG_FILE="/tmp/package_install.log"
+timestamp=$(date +%Y-%m-%d_%H-%M-%S)
+
+if [ $ID -ne 0 ]
 then
-    echo "this is not a root user kindly cehck the root aeccess"
+    echo -e "${R}This is not a root user. Kindly check root access.${N}"
     exit 1
 else
-    echo "wellcome to the root aeccess"
+    echo -e "${G}Welcome, root user.${N}"
+fi
 
 touch "$LOG_FILE"
 
-if [ $? -eq 0 ]
+if [ $? -ne 0 ]
 then
-    echo " === Installation started at $(timestmp) ===" >> "$LOG_FILE"
-else
-    echo "=== Installation failed $(timestmp) ===" >> "$LOG_FILE"
+    echo "=== Failed to create log file at $timestamp ==="
     exit 1
+else
+    echo "=== Installation started at $timestamp ===" >> "$LOG_FILE"
 fi
 
-yum install mysql -y
+# INSTALL_PACKAGE() {
+#     yum install $1 -y >> $LOG_FILE 2>&1
+#     VALIDATE $? "Installing $1"
+# }
+
+# PACKAGES=("mysql" "nginx" "git" "wget" "net-tools" "httpd" "tree")
+# for PACKAGES in "${PACKAGES[@]}"
+# do
+    
+
+
+if [ $? -eq 0 ]
+then
+    echo -e "${G}MySQL installation successful.${N}"
+else
+    echo -e "${R}MySQL installation failed. Check $LOG_FILE.${N}"
+fi
