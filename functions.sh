@@ -37,7 +37,7 @@ fi
 # for PACKAGES in "${PACKAGES[@]}"
 # do
     
-yum install mysqltt -y
+yum install mysql -y >> $LOG_FILE
 
 if [ $? -eq 0 ]
 then
