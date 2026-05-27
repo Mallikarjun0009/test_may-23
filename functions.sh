@@ -22,6 +22,6 @@ if [ $? -eq 0 ]
 then
     echo " === Installation started at $(timestmp) ===" >> "$LOG_FILE"
 else
+    echo "=== Installation failed $(timestmp) ===" >> "$LOG_FILE"
 
 yum install mysql -y
-
