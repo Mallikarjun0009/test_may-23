@@ -40,7 +40,7 @@ fi
 yum install mysql -y >> $LOG_FILE
 VALIDATE $? "Installing MYSQL.."
 
-yum install ngnix -y >> $LOG_FILE
+yum install nginx -y >> $LOG_FILE
 VALIDATE $? "Installing NGINX"
 
 yum install tree -y >> $LOG_FILE
